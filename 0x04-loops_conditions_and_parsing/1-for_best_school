@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# makes the script portable
 school="Best School"
 
 for _ in {1..10}
