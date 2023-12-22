@@ -3,7 +3,7 @@
 
 while [ 1 ]
 do
+	echo "To infinity and beyond"
 	sleep 2
-	echo To infinity and beyond
 done
 
