@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# shows your bash PiD made easy
+
+pids=$(grep -l '\bbash\b' /proc/*/comm 2>/dev/null | awk -F'/' '{print $(NF-1)}')
+
+for pid in $pids; do
+    process_name=$(cat "/proc/$pid/comm")
+    echo "$pid, $process_name"
+done
+
