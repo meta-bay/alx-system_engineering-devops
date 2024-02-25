@@ -1,3 +1,4 @@
+# Client configuration file (w/ Puppet) 
 
 file_line { :
   ensure  => present,
