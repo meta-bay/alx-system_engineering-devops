@@ -1,4 +1,5 @@
 # Client configuration file (w/ Puppet) 
+include stdlib
 
 file_line { :
   ensure  => present,
