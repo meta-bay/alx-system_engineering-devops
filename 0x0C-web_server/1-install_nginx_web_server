@@ -3,6 +3,13 @@
 
 sudo apt -y install nginx
 sudo chown -R ubuntu:ubuntu /var/www
-echo "Hello World!" > /var/www/html/index.html
+echo "<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Hello World!</h1>
+</body>
+</html>" > /var/www/html/index.html
 sudo service nginx start
 
