@@ -3,7 +3,7 @@
 
 sudo apt-get install -y nginx
 echo "Hello World!" | sudo tee /var/www/html/index.html
-string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.getintopc.com\/softwares/3d-visualization/adobe-illustrator-2024-free-download/?id=002117964555;"
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;"
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 sudo service nginx restart
 
