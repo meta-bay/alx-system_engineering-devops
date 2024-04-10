@@ -6,17 +6,12 @@ import requests
 
 def number_of_subscribers(subreddit):
     '''
-    Request number of subs
+        gets number of subs
     '''
-    user_agent = 'custom_user_agent'
-    url = 'https://www.reddit.com/r/{}.json'.format(subreddit)
-
-    headers = {'User-Agent': user_agent}
-
-    request = requests.get(url, headers=headers, allow_redirects=False)
-
-    if request.status_code != 200:
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {"User-Agent": "custom user agent"}
+    req = requests.get(url, headers=headers, allow_redirects=False)
+    if req.status_code != 200:
         return 0
-
-    data = request.json()['data']
-    data.get('subscribers')
+    data = req.json().get("data")
+    return data.get("subscribers")
