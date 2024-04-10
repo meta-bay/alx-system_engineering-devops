@@ -8,7 +8,6 @@ def number_of_subscribers(subreddit):
     '''
     Request number of subs
     '''
-    
     user_agent = 'custom_user_agent'
     url = 'https://www.reddit.com/r/{}.json'.format(subreddit)
 
@@ -20,6 +19,4 @@ def number_of_subscribers(subreddit):
         return 0
 
     data = request.json()['data']
-    data_child = data['children']
-    info_data = data_child[0]['data']
-    return info_data['subreddit_subscribers'], "OK"
+    data.get('subscribers')
