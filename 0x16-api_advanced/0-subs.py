@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 ''' How many subscribers'''
+
 import requests
 
 
@@ -7,6 +8,7 @@ def number_of_subscribers(subreddit):
     '''
     Request number of subs
     '''
+    
     user_agent = 'custom_user_agent'
     url = 'https://www.reddit.com/r/{}.json'.format(subreddit)
 
