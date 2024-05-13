@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# reload gunicorn
-
-pgrep gunicorn | xargs kill -HUP
+# reloads gunicorn
+pgrep -f '[g]unicorn' | xargs kill -HUP
