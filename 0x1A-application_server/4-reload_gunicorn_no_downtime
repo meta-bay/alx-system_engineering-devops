@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # reloads gunicorn
-pgrep -f '[g]unicorn' | xargs kill -HUP
+PID=$(pgrep gunicorn | head -n 1)
+kill -HUP "$PID"
